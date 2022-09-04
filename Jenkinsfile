@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
 			      steps {
               echo 'Build application Test'
-              echo 'Build Test ${env.JOB_NAME}'  
+              echo "Build Test ${env.JOB_NAME}"  
             }
         }
         stage('Deploy') { 
