@@ -1,8 +1,7 @@
 pipeline {
     agent any
     environment{
-      NEW_VERISION = '1.3.0'
-      JOB_NAME = JOB_NAME
+      NEW_VERISION = '1.3.0'      
     }
     stages {
         stage('Build') { 
@@ -14,7 +13,7 @@ pipeline {
         stage('Test') {
 			      steps {
               echo 'Build application Test'
-              echo 'Build Test $(JOB_NAME)'  
+              echo 'Build Test ${env.JOB_NAME}'  
             }
         }
         stage('Deploy') { 
